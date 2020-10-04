@@ -26,13 +26,14 @@ SECRET_KEY = 'om*f$q@t)hqx)aa$)-3=61f9t)%a9gs24^q_5zyzy+wh$&wit^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.34.241.244']
-
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['3.34.241.244']
 
 # Application definition
 
 INSTALLED_APPS = [
     'pybo.apps.PyboConfig',
+    'common.apps.CommonConfig',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -124,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# 로그인 성공후 이동하는 URL 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
